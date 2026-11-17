@@ -179,3 +179,9 @@ h1, h2 { font-family: var(--display); letter-spacing: -.075em; }
 .video-sound-light:hover, .video-sound-light:focus-visible { background: var(--ink); color: #fff; }
 .sound-symbol { color: #8e79e8; font-size: 15px; line-height: .5; }
 @media (max-width: 760px) { .live-project.project-feature { grid-column: auto; } .live-browser { inset: 13% 7% 10%; } .video-sound-light { right: 12px; bottom: 32px; } }
+
+/* Homepage work collection */
+.homepage-work-section { padding-bottom: 80px; }
+.homepage-work-intro { max-width: 430px; margin: 24px 0 64px auto; color: #77777e; font-size: 14px; line-height: 1.8; }
+.homepage-work-section .live-project-grid { width: 100%; }
+@media (max-width: 760px) { .homepage-work-intro { margin: 22px 0 45px; } .homepage-work-section { padding-bottom: 70px; } }
