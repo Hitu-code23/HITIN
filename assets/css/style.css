@@ -158,3 +158,24 @@ h1, h2 { font-family: var(--display); letter-spacing: -.075em; }
   *, *::before, *::after { scroll-behavior: auto !important; transition-duration: .01ms !important; animation-duration: .01ms !important; }
   .reveal { opacity: 1; transform: none; }
 }
+
+/* Complete live portfolio collection — Velorien light editorial theme */
+.live-project-grid { align-items: start; }
+.live-project { --project-accent: #b7a4ff; }
+.live-project.project-feature { grid-column: 1 / -1; }
+.live-visual { background: #ececf0; color: var(--ink); border: 1px solid color-mix(in srgb, var(--project-accent) 38%, var(--line)); }
+.live-browser { position: absolute; inset: 12% 8% 11%; overflow: hidden; background: #fff; box-shadow: 0 24px 45px rgba(23,23,25,.16); transform: rotate(-1.2deg); transition: transform .4s ease, box-shadow .4s ease; }
+.live-project:nth-child(even) .live-browser { transform: rotate(1.2deg); }
+.live-visual:hover .live-browser { transform: rotate(0) translateY(-5px); box-shadow: 0 30px 56px rgba(23,23,25,.2); }
+.live-browser-bar { height: 27px; display: flex; align-items: center; gap: 5px; padding: 0 10px; border-bottom: 1px solid #e6e6eb; color: #9999a1; font-size: 8px; letter-spacing: .08em; white-space: nowrap; }
+.live-browser-bar i { width: 5px; height: 5px; border-radius: 50%; background: #d1d1d7; }
+.live-browser-bar span { overflow: hidden; text-overflow: ellipsis; margin-left: 5px; }
+.live-preview { position: absolute; inset: 27px 0 0; overflow: hidden; background: linear-gradient(140deg, color-mix(in srgb, var(--project-accent) 20%, white), #f8f8fa 58%); }
+.live-preview iframe { position: absolute; top: 0; left: 0; width: 1440px; height: 900px; border: 0; transform-origin: top left; pointer-events: none; }
+.live-placeholder { position: absolute; inset: 0; display: grid; place-items: center; color: #85858d; font-size: 10px; letter-spacing: .12em; text-transform: uppercase; }
+.video-project .live-visual { background: #dfe0e8; }
+.video-project .live-visual video { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.video-sound-light { position: absolute; z-index: 3; right: 18px; bottom: 38px; display: inline-flex; align-items: center; gap: 7px; padding: 9px 12px; border: 1px solid rgba(23,23,25,.2); border-radius: 999px; background: rgba(255,255,255,.82); color: var(--ink); font: 700 9px/1 var(--font); letter-spacing: .1em; text-transform: uppercase; cursor: pointer; backdrop-filter: blur(8px); }
+.video-sound-light:hover, .video-sound-light:focus-visible { background: var(--ink); color: #fff; }
+.sound-symbol { color: #8e79e8; font-size: 15px; line-height: .5; }
+@media (max-width: 760px) { .live-project.project-feature { grid-column: auto; } .live-browser { inset: 13% 7% 10%; } .video-sound-light { right: 12px; bottom: 32px; } }
